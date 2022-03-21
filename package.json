@@ -9,13 +9,17 @@
   "scripts": {
     "deploy": "sls deploy",
     "lint": "eslint . --ext .ts",
-    "lint-and-fix": "eslint . --ext .ts --fix"
+    "lint-and-fix": "eslint . --ext .ts --fix",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.93",
     "@typescript-eslint/eslint-plugin": "^5.15.0",
     "@typescript-eslint/parser": "^5.15.0",
     "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.0",
     "serverless": "^3.7.9",
     "serverless-dotenv-plugin": "^3.12.2",
     "serverless-webpack": "^5.6.1",
