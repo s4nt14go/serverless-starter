@@ -10,6 +10,7 @@ class Handler {
 
   async hello(
     event: APIGatewayEvent,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     _context: Context
   ): Promise<APIGatewayProxyResult> {
     return this.responseBuilder.getResponse('Hello world', event);
