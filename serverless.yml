@@ -18,6 +18,7 @@ custom:
   stage: ${opt:stage, self:provider.stage}
   webpack:
     packager: yarn
+    excludeFiles: '**/*.test.ts'
 
 functions:
   hello:
