@@ -1,0 +1,28 @@
+service: starter
+
+package:
+  individually: true  # Create an optimized package for our functions
+
+plugins:
+  - serverless-webpack
+  - serverless-dotenv-plugin # Load .env as environment variables
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: us-east-1
+  logRetentionInDays: 14
+
+custom:
+  stage: ${opt:stage, self:provider.stage}
+  webpack:
+    packager: yarn
+
+functions:
+  hello:
+    handler: src/handler.hello
+    events:
+      - http:
+          path: hello
+          method: get

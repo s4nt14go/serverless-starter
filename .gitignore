@@ -1,1 +1,4 @@
 /.idea/
+/setAwsProfile.sh
+/node_modules/
+/.serverless/
