@@ -13,6 +13,9 @@
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "test": "jest"
   },
+  "resolutions": {
+    "minimist": "1.2.6"
+  },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.93",
     "@types/jest": "^27.4.1",
@@ -22,6 +25,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.5.1",
+    "minimist": "^1.2.6",
     "prettier": "^2.6.0",
     "serverless": "^3.7.9",
     "serverless-dotenv-plugin": "^3.12.2",
