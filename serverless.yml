@@ -18,11 +18,10 @@ custom:
   stage: ${opt:stage, self:provider.stage}
   webpack:
     packager: yarn
-    excludeFiles: '**/*.test.ts'
 
 functions:
   hello:
-    handler: src/handler.hello
+    handler: src/hello.handler
     events:
       - http:
           path: hello

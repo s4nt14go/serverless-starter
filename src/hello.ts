@@ -1,7 +1,7 @@
 import { Context, APIGatewayEvent, APIGatewayProxyResult } from 'aws-lambda';
 import { ResponseBuilder } from './ResponseBuilder';
 
-class Handler {
+class Hello {
   private responseBuilder: ResponseBuilder;
 
   constructor() {
@@ -17,5 +17,5 @@ class Handler {
   }
 }
 
-const handler = new Handler();
-export const hello = handler.hello.bind(handler);
+const hello = new Hello();
+export const handler = hello.hello.bind(hello);
